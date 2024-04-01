@@ -1,11 +1,12 @@
 #' Economic Benefits of Justice
 #'
-#' Data produced by Appel and Loyle (2012) on the relationship between net FDI inflows in the 10-year period following conflict and the state's establishment of post-conflict justice (PCJ) institutions.
+#' Data produced by Appel and Loyle (2012) on the relationship between net FDI inflows in the 10-year period following conflict and the state's establishment of post-conflict justice (PCJ) institutions. Includes all developing nations that concluded an internal armed conflict with at least 25 battle-related deaths in the period between 1970 and 2001.
 #'
-#' Includes all developing nations that concluded an internal armed conflict with at least 25 battle-related deaths in the period between 1970 and 2001.
+#' Appel, Benjamin J. and Cyanne E. Loyle. 2012. "The economic benefits of justice: Post-conflict justice and foreign direct investment." Journal of Peace Research 49(5): 685-99. DOI: 10.1177/0022343312450044
 #'
 #' @format ## `ebj`
-#' A data frame with 95 rows and X columns:
+#' A data frame with 95 rows and 18 columns:
+#'
 #' \describe{
 #'    \item{id}{Unique case ID}
 #'    \item{ccode}{COW country code}
@@ -25,6 +26,8 @@
 #'    \item{damage}{The amount of pre-conflict GDP lost by the end of the conflict}
 #'    \item{peace_agreement}{Whether the conflict ended with a peace agreement}
 #'    \item{victory}{Whether one side emerged as the clear winner in the conflict}
+#'    \item{cold_war}{Whether the investment is occurring in the post-Cold War period}
 #' }
 #'
 #' @source https://files.prio.org/Journals/JPR/2012/49/5/Appel%20and%20Loyle%20Rep%20Data.zip
+"ebj"

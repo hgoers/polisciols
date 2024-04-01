@@ -1,0 +1,33 @@
+---
+title: "ebj"
+bibliography: references.bib
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(polisciols)
+library(modelsummary)
+```
+
+@appel2012 explore the relationship between post-conflict net FDI inflows and states' implementation of post-conflict justice (PCJ) institutions. They find that these institutions promote foreign investment in post-conflict states.
+
+You can access their data directly using:
+
+```{r}
+head(ebj)
+```
+
+You can then use these data to replicate their full model:
+
+```{r}
+m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + cap_account_openness + ex_rate_fluc + labor + f_life_exp + pol_constraints + polity2 + damage + conflict_duration + peace_agreement + victory, 
+        data = ebj)
+
+modelsummary(m, stars = T)
+```

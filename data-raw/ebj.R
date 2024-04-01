@@ -21,7 +21,8 @@ ebj <- ebj_raw |>
                    conflict_duration = cw_duration_lag,
                    damage,
                    peace_agreement = peace_agreement_lag,
-                   victory = victory_lag) |>
+                   victory = victory_lag,
+                   cold_war = coldwar) |>
   haven::zap_label()
 
 ebj
