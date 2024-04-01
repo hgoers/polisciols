@@ -1,5 +1,5 @@
 ---
-title: "ebj"
+title: "Economic Benefits of Justice"
 bibliography: references.bib
 ---
 
