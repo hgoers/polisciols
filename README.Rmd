@@ -1,0 +1,60 @@
+---
+output: github_document
+bibliography: references.bib
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# `polisciols`: Political Science OLS Replication Data
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of `polisciols` is to provide you with programmatic access to data that address political science questions.
+
+## Installation
+
+You can install the development version of polisciols from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("hgoers/polisciols")
+```
+
+## Using `polisciols`
+
+To use the data and helpful documentation, you will need to load `polisciols` into your current R session. You can do this by running the following:
+
+```{r}
+library(polisciols)
+```
+
+## Introducing multiple linear regression
+
+@appel2012 explore the relationship between post-conflict net FDI inflows and states' implementation of post-conflict justice (PCJ) institutions. They find that these institutions promote foreign investment in post-conflict states. Their empirical work can serve as a really clear introduction to multiple linear regression.
+
+You can access their full data set by running the following:
+
+```{r}
+head(ebj)
+```
+
+You can replicate their full linear regression model by running the following:
+
+```{r}
+
+m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + cap_account_openness + ex_rate_fluc + labor + f_life_exp + pol_constraints + polity2 + damage + conflict_duration + peace_agreement + victory + cold_war, 
+        data = ebj)
+
+summary(m)
+```
