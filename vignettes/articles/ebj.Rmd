@@ -26,7 +26,7 @@ head(ebj)
 You can then use these data to replicate their full model:
 
 ```{r}
-m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + cap_account_openness + ex_rate_fluc + labor + f_life_exp + pol_constraints + polity2 + damage + conflict_duration + peace_agreement + victory, 
+m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + cap_account_openness + ex_rate_fluc + labor + f_life_exp + pol_constraints + polity2 + damage + conflict_duration + peace_agreement + victory + cold_war, 
         data = ebj)
 
 modelsummary(m, stars = T)
