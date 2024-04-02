@@ -33,3 +33,21 @@ m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + c
 
 modelsummary(m, stars = T)
 ```
+
+## *The Geographic Spread of Militarized Disputes* by Alex Braithwaite (2006)
+
+@braithwaite2006 explores the relationship between the geographic features of conflicting states and Militarized Interstate Dispute (MID) contagion. Looking at the spread of MIDs between 1993 and 2001, he finds that the geographic spread of individual MIDs is a function of the: motivating issue; presence of vital resources; host country's terrain; and history of militarized conflict between the disputants.
+
+You can access their data directly using:
+
+```{r}
+head(mid_geo_spread)
+```
+
+You can then use these data to replicate his full model (*Table 3*):
+
+```{r}
+m <- lm(log_radius_area ~ incidents + duration + hostility + territory + host_resource + host_mountain + host_forest + ocean + vital_border + joint_size + peace_years, data = mid_geo_spread)
+
+modelsummary(m, stars = T)
+```
