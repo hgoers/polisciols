@@ -1,5 +1,5 @@
 ---
-title: "Simple Linear Regression"
+title: "Multiple Linear Regression"
 bibliography: references.bib
 ---
 
@@ -10,14 +10,14 @@ knitr::opts_chunk$set(
 )
 ```
 
+This article introduces each of the data sets that can be used to explore and better understand **multiple linear regression**. A full example using @appel2012 can be found in my lab notes for UMD's [GVPT722: Advanced Quantitative Methods for Political Science](https://hgoers.github.io/GVPT722/content/04-model_specification.html).
+
 ```{r setup}
 library(polisciols)
 library(modelsummary)
 ```
 
-## Introducing multiple linear regression
-
-### *The Economic Benefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
+*The Economic Benefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
 
 @appel2012 explore the relationship between post-conflict net FDI inflows and states' implementation of post-conflict justice (PCJ) institutions. They find that these institutions promote foreign investment in post-conflict states.
 
@@ -75,3 +75,5 @@ m <- lm(x_dual_use ~ defence_ally + democracy + conflict + pol_dissimilarity +
 
 modelsummary(m, stars = T)
 ```
+
+## Bibliography

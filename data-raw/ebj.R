@@ -7,7 +7,7 @@ ebj <- ebj_raw |>
   dplyr::transmute(id,
                    ccode,
                    country_name = countrycode::countrycode(ccode, "cown", "country.name"),
-                   pcj = truthvictim,
+                   pcj = factor(truthvictim, labels = c("No institutions", "PCJ institutions")),
                    net_fdi_inflows = v3Mdiff,
                    gdp_per_capita = fv8,
                    gdp = fv10,
@@ -20,9 +20,12 @@ ebj <- ebj_raw |>
                    pol_constraints = fv27,
                    conflict_duration = cw_duration_lag,
                    damage,
-                   peace_agreement = peace_agreement_lag,
-                   victory = victory_lag,
-                   cold_war = coldwar) |>
+                   peace_agreement = factor(peace_agreement_lag, labels = c("No agreement",
+                                                                            "Peace agreement")),
+                   victory = factor(victory_lag, labels = c("No victory",
+                                                            "Victory")),
+                   cold_war = factor(coldwar, labels = c("Post-Cold War",
+                                                         "Cold War"))) |>
   haven::zap_label()
 
 ebj
