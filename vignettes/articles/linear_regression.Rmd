@@ -15,7 +15,9 @@ library(polisciols)
 library(modelsummary)
 ```
 
-## *The EconomicBenefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
+## Introducing multiple linear regression
+
+### *The Economic Benefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
 
 @appel2012 explore the relationship between post-conflict net FDI inflows and states' implementation of post-conflict justice (PCJ) institutions. They find that these institutions promote foreign investment in post-conflict states.
 
@@ -34,11 +36,11 @@ m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + c
 modelsummary(m, stars = T)
 ```
 
-## *The Geographic Spread of Militarized Disputes* by Alex Braithwaite (2006)
+### *The Geographic Spread of Militarized Disputes* by Alex Braithwaite (2006)
 
 @braithwaite2006 explores the relationship between the geographic features of conflicting states and Militarized Interstate Dispute (MID) contagion. Looking at the spread of MIDs between 1993 and 2001, he finds that the geographic spread of individual MIDs is a function of the: motivating issue; presence of vital resources; host country's terrain; and history of militarized conflict between the disputants.
 
-You can access their data directly using:
+You can access his data directly using:
 
 ```{r}
 head(mid_geo_spread)
@@ -48,6 +50,28 @@ You can then use these data to replicate his full model (*Table 3*):
 
 ```{r}
 m <- lm(log_radius_area ~ incidents + duration + hostility + territory + host_resource + host_mountain + host_forest + ocean + vital_border + joint_size + peace_years, data = mid_geo_spread)
+
+modelsummary(m, stars = T)
+```
+
+## Introducing interactions
+
+### *Exporting Mass Destruction? The Determinants of Dual-Use Trade*, Matthew Fuhrmann (2008)
+
+You can access his data directly using:
+
+```{r}
+head(x_mass_destruction)
+```
+
+You can then use these data to replicate his full model (*Table 3*):
+
+```{r}
+m <- lm(x_dual_use ~ defence_ally + democracy + conflict + pol_dissimilarity + 
+          wmd_pursuit + wmd_acquisition + wmd_pursuit * pol_dissimilarity + 
+          wmd_acquisition * pol_dissimilarity + log_gdp + log_population + 
+          log_distance + log_x_all,
+        data = x_mass_destruction)
 
 modelsummary(m, stars = T)
 ```
