@@ -1,2 +1,10 @@
 ^polisciols\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
+^LICENSE\.md$
+^vignettes/articles$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^README\.Rmd$
+^\.github$
