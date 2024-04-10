@@ -17,7 +17,7 @@ library(polisciols)
 library(modelsummary)
 ```
 
-*The Economic Benefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
+### *The Economic Benefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
 
 @appel2012 explore the relationship between post-conflict net FDI inflows and states' implementation of post-conflict justice (PCJ) institutions. They find that these institutions promote foreign investment in post-conflict states.
 
@@ -35,6 +35,8 @@ m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + c
 
 modelsummary(m, stars = T)
 ```
+
+A more detailed explanation of multiple linear regression using these data can be found in [my lab notes](https://hgoers.github.io/GVPT722/content/04-model_specification.html).
 
 ### *The Geographic Spread of Militarized Disputes* by Alex Braithwaite (2006)
 
@@ -72,6 +74,29 @@ m <- lm(x_dual_use ~ defence_ally + democracy + conflict + pol_dissimilarity +
           wmd_acquisition * pol_dissimilarity + log_gdp + log_population + 
           log_distance + log_x_all,
         data = x_mass_destruction)
+
+modelsummary(m, stars = T)
+```
+
+A more detailed explanation of interactions using these data can be found in [my lab notes](https://hgoers.github.io/GVPT722/content/05-interactions.html).
+
+### *The Impact of Campaign Finance Laws on Party Competition*, Potter and Tavits (2003)
+
+You can access their data directly using:
+
+```{r}
+head(party_competition)
+```
+
+You can then use these data to replicate his full model (Table 2, page 83):
+
+```{r}
+m <- lm(
+  post_num_parties ~ fund_parity + dem_years + federal + presidential + 
+    log(avg_district_mag) + ethnolinguistic_frac + 
+    log(avg_district_mag)*ethnolinguistic_frac,
+  data = party_competition
+)
 
 modelsummary(m, stars = T)
 ```
