@@ -5,7 +5,7 @@ x_mass_destruction <- x_mass_destruction_raw |>
   dplyr::transmute(
     country,
     ccode,
-    x_dual_use = expdu / 1e9,
+    x_dual_use = expdu,
     x_dual_use_licence = dulicense,
     log_gdp = log_gdp2,
     log_population = log_pop,

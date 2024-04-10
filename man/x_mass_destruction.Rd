@@ -12,7 +12,7 @@ A data set with 153 observations and 14 variables.
 \describe{
 \item{country}{Export destination}
 \item{ccode}{COW code for the export destination}
-\item{x_dual_use}{The volume of US dual-use exports to the country (measured as the total US dollar value of licensed dual-use exports to the country) (in USD billions)}
+\item{x_dual_use}{The volume of US dual-use exports to the country (measured as the total US dollar value of licensed dual-use exports to the country)}
 \item{x_dual_use_licence}{The volume of US dual-use exports to the country (measured as the total number of approved export licences to the country)}
 \item{log_gdp}{The average GDP of the country between 1991 to 2001 (logged)}
 \item{log_population}{The average national population of the country between 1991 to 2001 (logged)}
