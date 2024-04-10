@@ -1,6 +1,6 @@
 #' The Impact of Campaign Finance Laws on Party Competition
 #'
-#' Data produced by Potter and Tavits (2013) used to explore the impact of campaign finance laws on party competition across countries.
+#' Data produced by Potter and Tavits (2015) used to explore the impact of campaign finance laws on party competition across countries.
 #'
 #' @format ## `party_competition`
 #' A data set with 130 observations and 18 variables.

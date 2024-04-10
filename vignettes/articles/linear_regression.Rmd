@@ -80,9 +80,9 @@ modelsummary(m, stars = T)
 
 A more detailed explanation of interactions using these data can be found in [my lab notes](https://hgoers.github.io/GVPT722/content/05-interactions.html).
 
-### *The Impact of Campaign Finance Laws on Party Competition*, Potter and Tavits (2003)
+### *The Impact of Campaign Finance Laws on Party Competition*, Potter and Tavits (2015)
 
-You can access their data directly using:
+You can access @potter2015 data directly using:
 
 ```{r}
 head(party_competition)

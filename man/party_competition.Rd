@@ -38,6 +38,6 @@ British Journal of Political Science, Volume 45, Issue 1, January 2015, pp. 73 -
 party_competition
 }
 \description{
-Data produced by Potter and Tavits (2013) used to explore the impact of campaign finance laws on party competition across countries.
+Data produced by Potter and Tavits (2015) used to explore the impact of campaign finance laws on party competition across countries.
 }
 \keyword{datasets}
