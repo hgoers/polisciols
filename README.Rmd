@@ -58,3 +58,9 @@ m <- lm(net_fdi_inflows ~ pcj + gdp_per_capita + gdp + gdp_per_capita_growth + c
 
 summary(m)
 ```
+
+## Credits
+
+This package was inspired by [Dr Joshua Alley's](https://joshuaalley.github.io/) [`cross-sectional-ols` repository](https://github.com/joshuaalley/cross-sectional-ols). @alley2021 describes this work.
+
+## References
