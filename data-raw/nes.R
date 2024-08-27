@@ -19,6 +19,8 @@ nes <- nes_raw |>
                                          "High school credential",
                                          "Some post-high school, no bachelor’s degree",
                                          "Bachelor’s degree",
-                                         "Graduate degree")))
+                                         "Graduate degree")),
+            therm_biden = V201151,
+            therm_trump = V201152)
 
 usethis::use_data(nes, overwrite = TRUE)

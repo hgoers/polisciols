@@ -7,12 +7,14 @@
 \format{
 \subsection{\code{nes}}{
 
-A data frame with 8280 rows and 3 columns:
+A data frame with 8280 rows and 5 columns:
 
 \describe{
 \item{respondent_id}{Each respondent's identification number}
 \item{attention_to_politics}{How often do you pay attention to what’s going on in government and politics?}
 \item{education}{What is the highest level of school you have completed or the highest degree you have received?}
+\item{therm_biden}{On a scale from 0 to 100, how would you rate Joe Biden?}
+\item{therm_trump}{On a scale from 0 to 100, how would you rate Donald Trump?}
 }
 }
 }
