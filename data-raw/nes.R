@@ -20,7 +20,7 @@ nes <- nes_raw |>
                                          "Some post-high school, no bachelor’s degree",
                                          "Bachelor’s degree",
                                          "Graduate degree")),
-            therm_biden = V201151,
-            therm_trump = V201152)
+            therm_biden = if_else(V201151 %in% c(-9, -4, 998), NA_real_, V201151),
+            therm_trump = if_else(V201152 %in% c(-9, -4, 998), NA_real_, V201152))
 
 usethis::use_data(nes, overwrite = TRUE)
