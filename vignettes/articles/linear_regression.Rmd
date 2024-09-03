@@ -17,6 +17,8 @@ library(polisciols)
 library(modelsummary)
 ```
 
+## Introducing multiple linear regression
+
 ### *The Economic Benefits of Justice: Post-Conflict Justice and Foreign Direct Investment.* by Appel and Loyle (2012)
 
 @appel2012 explore the relationship between post-conflict net FDI inflows and states' implementation of post-conflict justice (PCJ) institutions. They find that these institutions promote foreign investment in post-conflict states.
