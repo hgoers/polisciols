@@ -13,7 +13,7 @@ alliances_regime <- create_dyadyears(directed = F, subset_years = 2017) |>
                              T ~ "Hybrid")) |>
   transmute(country_1 = countrycode(ccode1, "cown", "country.name"),
             country_2 = countrycode(ccode2, "cown", "country.name"),
-            defense_agreement = atop_defense,
+            defense_agreement = factor(atop_defense, labels = c("No", "Yes")),
             regime_dyad = if_else(regime1 == regime2, "Joint", "Mixed"))
 
 usethis::use_data(alliances_regime, overwrite = TRUE)
