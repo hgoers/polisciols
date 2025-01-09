@@ -15,6 +15,7 @@
 #'    \item{therm_biden}{On a scale from 0 to 100, how would you rate Joe Biden?}
 #'    \item{therm_trump}{On a scale from 0 to 100, how would you rate Donald Trump?}
 #'    \item{income_gap}{Do you think the difference in incomes between rich people and poor people in the United States today is larger, smaller, or about the same as it was 20 years ago?}
+#'    \item{dem}{Binary version of the following question: What political party are you registered with, if any?}
 #' }
 #'
 #' @source https://electionstudies.org/data-center/2020-time-series-study/

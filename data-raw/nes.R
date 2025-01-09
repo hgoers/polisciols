@@ -31,7 +31,9 @@ nes <- nes_raw |>
                                 labels = c("Don't know",
                                            "Smaller",
                                            "About the same",
-                                           "Larger")))
+                                           "Larger")),
+            dem = if_else(V201018 == 1, 1, 0),
+            dem = factor(dem, labels = c("Other", "Democrat")))
 
 nes
 
